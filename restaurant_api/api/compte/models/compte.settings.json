@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "comptes",
+  "info": {
+    "name": "Compte"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "email": {
+      "type": "string"
+    },
+    "password": {
+      "type": "password"
+    },
+    "username": {
+      "type": "string"
+    }
+  }
+}

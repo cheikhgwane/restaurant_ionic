@@ -1,0 +1,8 @@
+{
+  "appId": "com.example.app",
+  "appName": "Projet",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "www",
+  "cordova": {}
+}

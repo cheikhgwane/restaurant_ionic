@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Compte
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div>
+        <ion-list>
+            <ion-item *ngFor="let compte of comptes" >
+              <ion-label>{{compte.username}}</ion-label>
+              Email: {{compte.email}}
+              <!-- <ion-icon name="create" color="warning" (click)="modifierMdp(compte.id)"></ion-icon> -->
+            </ion-item>
+        </ion-list>
+      </div>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+     <ion-fab-button (click)="logout()">
+     <ion-icon name="log-out"></ion-icon> 
+    </ion-fab-button> 
+</ion-fab>
+</ion-content>

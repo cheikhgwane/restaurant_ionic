@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      SUNU RESTAURANT
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   <ion-item class="menu">MENU DU JOUR</ion-item>
+
+  <ion-item *ngFor="let plat of plats" >
+    <ion-text>
+        <ion-label class="jour"> {{plat.jour}} : {{plat.nom}} </ion-label>
+        {{plat.Description}}
+    </ion-text>
+  </ion-item>
+
+</ion-content>

@@ -1,0 +1,10 @@
+import { Plat } from "./plat";
+
+export class Restaurant {
+  id: number;
+  nom: string;
+  Latitude: number;
+  Longitude: number;
+  plats: Plat[];
+  dailies: Plat[];
+}

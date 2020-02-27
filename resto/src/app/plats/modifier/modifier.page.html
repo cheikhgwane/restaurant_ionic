@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Modifier informations plats</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/plats"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="updatePlatForm" (submit)="updatePlat(updatePlatForm.value)">
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">Nom du plat</ion-label>
+          <ion-input formControlName="nom" [(ngModel)]="nom" value="{{nom}}"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Description</ion-label>
+          <ion-input formControlName="Description" [(ngModel)]="Description" value="{{Description}}"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Prix</ion-label>
+          <ion-input formControlName="Prix" type="number" [(ngModel)]="Prix" value="{{Prix}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Fournisseur</ion-label>
+        <ion-input formControlName="fournisseur" [(ngModel)]="fournisseur" value="{{fournisseur}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Jour</ion-label>
+        <ion-input formControlName="jour" [(ngModel)]="jour" value="{{jour}}"></ion-input>
+      </ion-item>
+    </ion-list>
+<ion-button type="submit" expand="full">Modifier</ion-button>
+</form>
+</ion-content>
