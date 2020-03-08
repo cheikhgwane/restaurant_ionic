@@ -5,7 +5,11 @@
 export const environment = {
   production: false
 };
-export const URL ='http://localhost:1337';
+//test url
+export const URL = "http://192.168.43.182:1337";
+//export const URL = "http://localhost:1337";
+
+export const GOOGLE_MAPS_API_KEYS = "AIzaSyCY14k5AaUWKmC1APIQWzEEq3lg-7r8d0o";
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

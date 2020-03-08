@@ -9,28 +9,32 @@
 
 <ion-content>
   <form [formGroup]="postPlatForm" (submit)="postPlat(postPlatForm.value)">
-      <ion-list>
-        <ion-item>
-          <ion-label position="stacked">Nom du plat</ion-label>
-          <ion-input formControlName="nom"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Description</ion-label>
-          <ion-input formControlName="Description"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Prix</ion-label>
-          <ion-input formControlName="Prix" type="number"></ion-input>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Nom du plat</ion-label>
+        <ion-input formControlName="nom"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="stacked">Fournisseur</ion-label>
-        <ion-input formControlName="fournisseur"></ion-input>
+        <ion-label position="stacked">Description</ion-label>
+        <ion-input formControlName="Description"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Prix</ion-label>
+        <ion-input formControlName="Prix" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Fournisseur</ion-label>
+        <ion-select [compareWith]="compareWith">
+          <ion-select-option *ngFor="let restaurant of restaurants"
+            >{{restaurant.nom}}</ion-select-option
+          >
+        </ion-select>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">Jour</ion-label>
         <ion-input formControlName="jour"></ion-input>
       </ion-item>
     </ion-list>
-<ion-button type="submit" expand="full">Ajouter</ion-button>
-</form>
+    <ion-button type="submit" expand="full">Ajouter</ion-button>
+  </form>
 </ion-content>
