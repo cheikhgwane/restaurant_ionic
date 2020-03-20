@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ajouter restaurant</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/restaurants"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="addresto">
+  <form [formGroup]="ajoutRestoForm" (submit)="postResto(ajoutRestoForm.value)">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Nom restaurant</ion-label>
+        <ion-input formControlName="nom"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Description</ion-label>
+        <ion-input formControlName="description"></ion-input>
+      </ion-item>
+      <ion-item> </ion-item>
+    </ion-list>
+    <agm-map
+      [zoom]="13"
+      [latitude]="lat"
+      [longitude]="lng"
+      (mapClick)="mapClicked($event)"
+    >
+      <agm-marker
+        [latitude]="lat"
+        [longitude]="lng"
+        (markerClick)="clickedMarker(test, 1)"
+        [markerDraggable]="true"
+        (dragEnd)="markerDragEnd($event)"
+      >
+      </agm-marker>
+    </agm-map>
+    <ion-button (click)="postResto(ajoutRestoForm.value)" expand="full"
+      >Ajouter</ion-button
+    >
+  </form>
+</ion-content>
